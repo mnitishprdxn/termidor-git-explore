@@ -226,16 +226,25 @@ nav ul li a {
 li p {
   padding-top: 9px;
   text-align: center;
+  width: 79%;
+  margin: 0 auto;
 }
 
 li a {
   color: white;
 }
 
-nav ul li:hover {
-  transform: scale(1.1,1.1);
+nav ul li:hover p{
   transition: transform 3000ms ease-in 0;
+  transform: scale(1.2,1.2);
 }
+
+nav ul li:hover {
+  background: white;
+  box-shadow: 0 0 3px #d00000;
+}
+
+nav ul li:hover a { color: #d00000; }
 
 .main-wrapper {
   width: 95%;
@@ -253,7 +262,7 @@ nav ul li:hover {
   padding-bottom: 35px;
   color: white;
   font-family: Arial;
-  font-size: 60px;
+  font-size: 47px;
   font-weight: 700;
   line-height: 64.446px;
   text-align: left;
@@ -391,8 +400,8 @@ footer {
 }
 
 .footer-wrapper {
-  max-width: 1130px;
   width: 95%;
+  max-width: 1130px;
   margin: 0 auto;
 }
 
@@ -459,33 +468,41 @@ footer p:nth-child(2) {
 
 @media screen and (max-width: 800px) {
   
-  nav img { 
+  nav { 
+    width: 8%;
+    position: relative; 
+  }
+
+  nav img {
     display: block;
-    float: right; 
+    float: right;
   }
 
-  nav ul { 
+  nav ul {
+    width: 206%;
     display: none;
-    width: 100%;
     position: absolute;
-    top: 67px;
-    width: 38%;
-   }
-
-   nav ul li { 
-    width: 100%;
-    /*margin-bottom: 5px;*/
-    background: #D00000; 
-    border: 1px solid white;
+    top: 29px;
+    right: 0px;
   }
 
-  nav ul li a { color: white; }
+  nav ul li {
+    width: 100%;
+    border: 1px solid white;
+    /*margin-bottom: 5px;*/
+    background: #d00000;
+  }
 
-  nav .hamburger-menu:hover ul{ display: block; }
+  nav ul li a {
+    color: white;
+  }
+
+  nav .hamburger-menu:hover ul {
+    display: block;
+  }
 
   nav ul li:hover {
-    transform: scale(1.1,1.1);
     transition: transform 300ms ease-in 0;
+    transform: scale(1.1,1.1);
   }
-
 }
