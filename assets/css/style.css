@@ -173,7 +173,9 @@ sub {
 
 /*********************** Styling start **********************/
 
-img { max-width: 100%; }
+img {
+  max-width: 100%;
+}
 header {
   padding: 23px 0;
 }
@@ -230,6 +232,11 @@ li a {
   color: white;
 }
 
+nav ul li:hover {
+  transform: scale(1.1,1.1);
+  transition: transform 3000ms ease-in 0;
+}
+
 .main-wrapper {
   width: 95%;
   max-width: 1130px;
@@ -256,9 +263,9 @@ li a {
   width: 67%;
   height: 129px;
   border-radius: 5px;
-  background: white;
-  display: inline-block;
   margin-right: 3%;
+  display: inline-block;
+  background: white;
 }
 
 .take-test-left p {
@@ -274,35 +281,39 @@ li a {
 .take-test-right {
   width: 29%;
   height: 119px;
-  float: right;
-  background: white;
   border-radius: 5px;
+  background: white;
+  float: right;
   text-align: center;
 }
 
-.take-test-right {  padding-top: 10px; }
+.take-test-right {
+  padding-top: 10px;
+}
 
-main { background: #F6F3E9; }
+main {
+  background: #f6f3e9;
+}
 
 .video-div {
   width: 70%;
-  margin: 0 auto;
   padding: 23px;
+  margin: 0 auto;
 }
 
 .iframe-container {
-  position: relative;
-  padding-bottom: 56.25%;
   height: 0;
+  padding-bottom: 56.25%;
   overflow: hidden;
+  position: relative;
 }
 
 iframe {
+  width: 100%;
+  height: 0;
+  height: 100%;
   position: absolute;
   top: 0;
-  height: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .termite-details {
@@ -311,18 +322,18 @@ iframe {
 }
 
 .termite-details p {
-  font-family: Arial;
   color: #000;
+  font-family: Arial;
   font-size: 20px;
   font-weight: 400;
-  letter-spacing: -0.4px;
   line-height: 26px;
   text-align: left;
+  letter-spacing: -.4px;
 }
 
 .termite-details p:nth-child(1) {
-  font-family: Arial;
   color: #c10a25;
+  font-family: Arial;
   font-size: 22px;
   font-weight: 700;
   line-height: 23px;
@@ -331,14 +342,16 @@ iframe {
 
 .termite-details p:nth-child(1),
 .termite-details p:nth-child(2),
-.termite-details p:nth-child(3) { padding-bottom: 21px; }
+.termite-details p:nth-child(3) {
+  padding-bottom: 21px;
+}
 
 .link-for-test {
   width: 100%;
   height: 65px;
-  margin-bottom: 20px;
-  background: #CB0013;
   border-radius: 5px;
+  margin-bottom: 20px;
+  background: #cb0013;
 }
 
 .link-for-test-external {
@@ -348,71 +361,80 @@ iframe {
 }
 
 .link-for-test p {
-  width: 100%;
-  height: 65px; 
+  width: 37%;
+  height: 65px;
   padding-top: 17px;
-  text-align: center; 
+  margin: 0 auto;
   position: relative;
+  text-align: center;
 }
 
 .link-for-test p span:nth-child(1) {
-  font-family: Arial;
   color: white;
+  font-family: Arial;
   font-size: 26px;
   font-weight: 700;
-  letter-spacing: 0.52px;
   line-height: 18px;
   text-align: left;
+  letter-spacing: .52px;
 }
 
 .link-for-test p span:nth-child(2) {
   position: absolute;
-  left: 64%;
+  right: 5%;
   bottom: 45%;
 }
 
-footer { 
+footer {
   height: 99px;
-  background: #CB0013; 
+  background: #cb0013;
+}
+
+.footer-wrapper {
+  max-width: 1130px;
+  width: 95%;
+  margin: 0 auto;
 }
 
 footer ul {
   width: 50%;
 }
 
-footer li { 
-  width: 23%; 
+footer li {
+  width: 23%;
   display: inline-block;
 }
 
-footer li p { 
+footer li p {
   font-family: Arial;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 15px;
-  text-align: center;
-  text-transform: uppercase; 
-}
-
-footer li+li:after {
-  content:"|";
-}
-
-footer li a { text-decoration: none; }
-
-footer li+li {
- width: 27%;
-}
-
-footer p:nth-child(1) {
-  font-family: Arial;
-  color: white;
   font-size: 16px;
   font-weight: 400;
   line-height: 15px;
   text-align: center;
   text-transform: uppercase;
-  float: left; 
+}
+
+footer li + li:after {
+  content: '|';
+}
+
+footer li a {
+  text-decoration: none;
+}
+
+footer li + li {
+  width: 27%;
+}
+
+footer p:nth-child(1) {
+  color: white;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 15px;
+  float: left;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 footer p span:nth-child(1),
@@ -421,18 +443,49 @@ footer p span:nth-child(3) {
 }
 
 footer p:nth-child(1) {
-  padding: 23px 0 9px 0; 
+  padding: 23px 0 9px 0;
 }
 
 footer p:nth-child(2) {
   width: 24%;
   padding-left: 1.8%;
+  color: rgba(255, 255, 255, .5);
   font-family: Arial;
-  color: rgba(255, 255, 255, 0.5);
   font-size: 12px;
   font-weight: 400;
   line-height: 15px;
   text-align: left;
 }
 
+@media screen and (max-width: 800px) {
+  
+  nav img { 
+    display: block;
+    float: right; 
+  }
 
+  nav ul { 
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 67px;
+    width: 38%;
+   }
+
+   nav ul li { 
+    width: 100%;
+    /*margin-bottom: 5px;*/
+    background: #D00000; 
+    border: 1px solid white;
+  }
+
+  nav ul li a { color: white; }
+
+  nav .hamburger-menu:hover ul{ display: block; }
+
+  nav ul li:hover {
+    transform: scale(1.1,1.1);
+    transition: transform 300ms ease-in 0;
+  }
+
+}
